@@ -4,13 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="profile.css" />
+    <link rel="stylesheet" href="contact.css" />
     <title>Home</title>
   </head>
   <nav>
     <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#Projects">Projects</a></li>
-      <li><a href="#Contact">Contact Me</a></li>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#Profile">Home</a></li>
+      <li><a href="#Project">Project</a></li>
+      <li><a href="#Contact">Contact</a></li>
     </ul>
   </nav>
   <body>
@@ -22,18 +25,62 @@
           <span></span>
         </div>
         <div class="content">
-          <div class="img-container">
-            <img
-              src="assets/img/dimas1-removebg-preview.png"
-              alt="foto-dimas"
-            />
-          </div>
           <p>Hai, Namaku <b>Dimas Alvino</b></p>
         </div>
       </section>
-      <section id="Project">
-        <h1>contoh</h1>
+
+      <section id="about">
+        <div class="about-container">
+
+          <div class="about-text">
+            <h1>About Me</h1>
+          </div>
+          <div class="about-img">
+            <img src="assets/img/fotoprofile.png" alt="">
+          </div>
+          
+        </div>
+        
       </section>
+
+      <section id="Project">
+        <h1>My Project</h1>
+        <div class="project-container">
+          <a
+            href="https://lightstudioid.itch.io/security-man"
+            class="card-container"
+            target="_blank"
+          >
+            <div class="img-wrapper">
+              <img src="assets/img/fotogame.png" alt="" />
+            </div>
+            <h3>Game Project</h3>
+            <p>VR Game Security Man</p>
+          </a>
+
+          <a
+            href="https://pplgrolas.my.id/0073488910/securityman/public/home.php"
+            class="card-container"
+            target="_blank"
+          >
+            <div class="img-wrapper">
+              <img src="assets/img/fotowebsite.png" alt="" />
+            </div>
+            <h3>Website</h3>
+            <p>Promotion For Security Man</p>
+          </a>
+        </div>
+      </section>
+
+
+       <section id="Contact">
+      <div class="contact-container">hai namaku dimas</div>
+     </section>
     </div>
+    
+    
+        
+      
+    
   </body>
 </html>
