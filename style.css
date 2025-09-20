@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'Lora';
+    font-weight: 400;
+    src: url(assets/font/Lora-Regular.ttf);
+}
+
+*{
+    font-family: 'Lora';
+    
+}
