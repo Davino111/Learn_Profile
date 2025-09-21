@@ -1,0 +1,55 @@
+.about-container {
+  position: relative;   
+  
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 50px 20px;
+  min-height: 100vh;   
+}
+
+.about-text {
+  margin-top: 60px;
+  max-width: 600px;
+}
+
+.about-text h1{
+    font-weight: 500;
+}
+.about-text p{
+    margin-top: 30px;
+    font-size: 1.2rem;
+   font-weight: 400 ;
+}
+
+.about-img {
+  position: absolute;
+  bottom: 0;   
+  right: 20px;    
+}
+
+.about-img img {
+  width: 420px;
+  height: auto;
+  
+}
+
+
+@media (max-width: 768px) {
+  .about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .about-img {
+    position: relative;
+    margin-top: 40px;
+  }
+
+  .about-img img {
+    width: 300px;      
+    max-width: 80%;     
+    height: auto ;
+  }
+}

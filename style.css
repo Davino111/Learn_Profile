@@ -145,6 +145,10 @@ section .wave span:nth-child(3) {
   }
 }
 
+
+
+
+
 /* Projects */
 
 
@@ -153,6 +157,7 @@ section .wave span:nth-child(3) {
   text-align: center;
   margin-top: 50px;
   margin-bottom: 5vh;
+  font-weight: 400;
 }
 
 #Project .project-container {
