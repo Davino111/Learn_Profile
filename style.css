@@ -1,85 +1,103 @@
 @font-face {
-    font-family: 'Lora';
-    font-weight: 400;
-    src: url(assets/font/Lora-Regular.ttf);
+  font-family: "Lora";
+  font-weight: 400;
+  src: url(assets/font/Lora-Regular.ttf);
 }
 
-*{
-   
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
+:root {
+  --base-color: white;
+  --secondary-color: black;
+  --nav-color: rgba(35, 35, 35, 0.07);
+  --hover-color: grey;
+  --wave-color: #b8b8b9;
+  --wavebackground-color: rgb(255, 255, 255);
+  --waves-color: rgba(255, 255, 255, 0.5);
 }
 
-body{
-
-     font-family: 'Lora';
-     color: #000;
-    overflow-y: scroll;
-     scroll-snap-type: y mandatory;
+.darkmode {
+  --base-color: black;
+  --secondary-color: white;
+  --nav-color: rgba(237, 237, 237, 0.07);
+  --hover-color: grey;
+  --wave-color: rgb(82, 82, 82);
+  --wavebackground-color: rgb(47, 47, 47);
+  --waves-color: rgba(0, 0, 0, 0.5);
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--base-color);
+  font-family: "Lora";
+  color: var(--secondary-color);
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
 
 /* Navbar */
-nav{
-    z-index: 1000;
-    position: sticky;
-    top: 10px;
-    background-color: transparent;
-    background-color: rgba(35, 35, 35, 0.07);
-    backdrop-filter: blur(10px);      
-    border-radius: 20px;
-    max-width: 300px;
-    min-width:25%;
-    margin: 0 auto;
+nav {
+  z-index: 1000;
+  position: sticky;
+  top: 10px;
+  background-color: transparent;
+  background-color: var(--nav-color);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  max-width: 300px;
+  min-width: 25%;
+  margin: 0 auto;
 }
 nav ul {
-    padding: 10px 10px;
-    display: flex;
-    list-style: none;
-    text-align: center;
-    justify-content: center;
+  padding: 10px 10px;
+  display: flex;
+  list-style: none;
+  text-align: center;
+  justify-content: center;
 }
 
-nav a{
-    text-decoration: none;
-    color: #000;
-    transition: color 0.2s ease;
+nav a {
+  text-decoration: none;
+  color: var(--secondary-color);
+  transition: color 0.2s ease;
 }
 
-nav a:hover{
-  color: grey;
+nav a:hover {
+  color: var(--hover-color);
 }
 
-nav li{
-    margin: 0px 10px;
+nav li {
+  margin: 0px 10px;
 }
 
-.section-container{
-    height: 100vh;
-    overflow-y: scroll;
-    scroll-snap-type:y mandatory;
+.section-container {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
 }
 
 section {
   position: relative;
-  scroll-snap-align:start ;
+  scroll-snap-align: start;
   width: 100%;
   height: 100vh;
   overflow: hidden;
- 
+
   min-height: 100vh;
 }
 
-#home{
+#home {
   position: relative;
-  
+
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-
 }
 
 /* Hero Section */
@@ -88,8 +106,7 @@ section .wave {
   left: 0;
   width: 100%;
   height: 100%;
-  background: #b8b8b9;
-  box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
+  background: var(--wave-color);
   transition: 0.5s;
 }
 section .wave span {
@@ -100,45 +117,45 @@ section .wave span {
   top: 0;
   left: 50%;
   transform: translate(-70%, -75%);
-  background: #000;
+  background: var(--secondary-color);
 }
 .content {
   position: relative;
   z-index: 1;
   font-size: 1.5em;
-  letter-spacing :1px;
-  color: #000000;
+  letter-spacing: 1px;
+  color: var(--secondary-color);
   text-align: center;
-  padding-bottom:200px;
+  padding-bottom: 200px;
 }
 
 .img-container {
-  width: 600px;      
-  height: 400px;    
-  overflow: hidden; 
+  width: 600px;
+  height: 400px;
+  overflow: hidden;
   padding-top: -100px;
 }
 
 .img-container img {
   width: 100%;
   height: 500px;
-  object-fit: cover; 
+  object-fit: cover;
 }
 
 section .wave span:nth-child(1) {
   border-radius: 45%;
-  background: rgb(255, 255, 255);
+  background: var(--wavebackground-color);
   animation: animate 14s linear infinite;
 }
 
 section .wave span:nth-child(2) {
   border-radius: 40%;
-  background: rgba(255, 255, 255, 0.5);
+  background: var(--waves-color);
   animation: animate 20s linear infinite;
 }
 section .wave span:nth-child(3) {
   border-radius: 42.5%;
-  background: rgba(255, 255, 255, 0.5);
+  background: var(--waves-color);
   animation: animate 25s linear infinite;
 }
 @keyframes animate {
@@ -150,15 +167,9 @@ section .wave span:nth-child(3) {
   }
 }
 
-
-
-
-
 /* Projects */
 
-
-
-#Project h1{
+#Project h1 {
   text-align: center;
   margin-top: 50px;
   margin-bottom: 5vh;
@@ -168,60 +179,82 @@ section .wave span:nth-child(3) {
 #Project .project-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;   
-  align-items: center;       
+  justify-content: center;
+  align-items: center;
   margin: 5px auto;
-  gap: 80px ;               
+  gap: 80px;
 }
 
 #Project .card-container {
   text-decoration: none;
-  color: #000;
-  flex: 1 380px ;         
-  max-width: 500px;         
-  background: #fff;
+  color: var(--secondary-color);
+  flex: 1 380px;
+  max-width: 500px;
+  background: var(--base-color);
   transition: transform 0.3s ease;
 }
 
 #Project .card-container:hover {
-  transform: translateY(-5px); 
+  transform: translateY(-5px);
 }
 
 #Project .card-container p {
-  color: gray;
+  color: var(--background-color);
 }
 
 #Project .img-wrapper {
   overflow: hidden;
-  
+
   display: flex;
-  justify-content: center;   
+  justify-content: center;
   align-items: center;
 }
 
 #Project .img-wrapper img {
   width: 100%;
-  max-width: 100%;       
+  max-width: 100%;
   height: 400px;
   object-fit: cover;
   transition: transform 0.3s ease;
 }
 
 #Project .img-wrapper img:hover {
-  transform: scale(1.1);    
+  transform: scale(1.1);
 }
 
+button{
 
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+.theme-button {
+  border-radius: 50%;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background: var(--nav-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ 
+}
 
+.theme-button i {
+  font-size: 24px;
+  cursor: pointer;
+}
 
 @media (max-width: 768px) {
   #Project .card-container {
-    flex: 1 1 90%;   
-    max-width: 90%;  
+    flex: 1 1 90%;
+    max-width: 90%;
   }
 
   #Project .img-wrapper img {
-    height: auto;     
+    height: auto;
     max-height: 250px;
   }
 }
