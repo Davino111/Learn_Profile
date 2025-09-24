@@ -6,7 +6,7 @@ const sun = btn.querySelector(".fa-sun");
 
 btn.addEventListener("click", () =>{
 
-    console.log("Hello world!");    
+      
     body.classList.toggle("darkmode");
 
     if(body.classList.contains("darkmode")){
